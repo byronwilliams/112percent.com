@@ -20,7 +20,7 @@ sass:
     style: :compressed
 
 # Build settings
-permalink: /:title
+permalink: /:year-:month-:day-:title
 paginate: 8
 paginate_path: /page:num/
 
@@ -35,3 +35,4 @@ defaults:
 
 gems:
     - jekyll-paginate
+    - jekyll-sitemap

@@ -5,6 +5,7 @@ description: ""
 tags: ["bower", "npm", "JavaScript"]
 title: "ditching bower"
 type: "post"
+location: On a train to Wigan
 ---
 
 `bower` used to be my best friend. I'd use it for all of the frontend modules
