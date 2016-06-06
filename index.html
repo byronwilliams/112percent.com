@@ -3,14 +3,17 @@ layout: default
 ---
 
 <!-- This loops through the paginated posts -->
-{% for post in paginator.posts %}
-    <div class="post-list">
-        <a href="{{ site.baseurl }}{{ post.url }}"><h1>{{ post.title }}</h1></a>
-        <div class="">
-            <span class="ordinal">{{ post.date | date: "%e" }}</span> {{ post.date | date: "%B &#8217;%y" }}
-        </div>
-    </div>
-{% endfor %}
+<div class="post-list">
+  {% for post in paginator.posts %}
+      <div class="post-list__item">
+          <a href="{{ site.baseurl }}{{ post.url }}"><h1>{{ post.title }}</h1></a>
+          <div class="">
+              <span class="ordinal">{{ post.date | date: "%e" }}</span> {{ post.date | date: "%B &#8217;%y" }}
+          </div>
+      </div>
+  {% endfor %}
+</div>
+
 
 {% if paginator.total_pages > 1 %}
 <ul class="pagination">
