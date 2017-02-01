@@ -1,45 +1,459 @@
----
-layout: default
----
+<!DOCTYPE HTML>
+<!--
+	Story by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Byron Williams - Full Stack Developer</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
 
-<!-- This loops through the paginated posts -->
-{% for post in paginator.posts %}
-    <div class="post-list">
-        <a href="{{ site.baseurl }}{{ post.url }}"><h1>{{ post.title }}</h1></a>
-        <div class="">
-            <span class="ordinal">{{ post.date | date: "%e" }}</span> {{ post.date | date: "%B &#8217;%y" }}
-        </div>
-    </div>
-{% endfor %}
+		<!-- Wrapper -->
+			<div id="wrapper" class="divided">
 
-{% if paginator.total_pages > 1 %}
-<ul class="pagination">
-  <li class="pagination-item">
-    <a class="pagination-link pagination-link--non-numeric" {% if paginator.page == 1 %}disabled="disabled"{% endif %} href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">&larr; First page</a>
-  </li>
-  <li class="pagination-item">
-    <a class="pagination-link pagination-link--non-numeric" {% if paginator.previous_page == nil %}disabled="disabled"{% endif %} href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Prev</a>
-  </li>
+				<!-- One -->
+					<section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+						<div class="content">
+							<h1>Byron Williams</h1>
+							<p class="major">
+								Full Stack Developer from Bath. <br />
+								Currently using: NodeJS/Go/Python/Elm<br />
+								<i>Available for work</i>
+							</p>
+							<!--<ul class="actions vertical">
+								<li><a href="#first" class="button big wide smooth-scroll-middle">Get Started</a></li>
+							</ul>-->
+						</div>
+						<div class="image">
+							<img src="images/top.jpg" alt="" />
+						</div>
+					</section>
 
-  <!-- Numbers -->
-  {% for page in (1..paginator.total_pages) %}
-    <li class="pagination-item">
-      {% if page == paginator.page %}
-        <a class="pagination-link pagination-link--selected" href="#">{{ page }}</a>
-      {% elsif page == 1 %}
-        <a class="pagination-link" href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-      {% else %}
-        <a class="pagination-link" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-      {% endif %}
-    </li>
-  {% endfor %}
-  <!-- End of numbers -->
+				<!-- Two -->
+					<!--<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+						<div class="content">
+							<h2>Magna etiam feugiat</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
+							<ul class="actions vertical">
+								<li><a href="#" class="button">Learn More</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="images/spotlight01.jpg" alt="" />
+						</div>
+					</section>-->
 
-  <li class="pagination-item">
-    <a class="pagination-link pagination-link--non-numeric" {% if paginator.next_page == nil %}disabled="disabled"{% endif %} href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &rarr;</a>
-  </li>
-  <li class="pagination-item">
-    <a class="pagination-link pagination-link--non-numeric" {% if paginator.page == paginator.total_pages %}disabled="disabled"{% endif %} href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', paginator.total_pages }}">Last page &rarr;</a>
-  </li>
+				<!-- Three -->
+					<!--<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+						<div class="content">
+							<h2>Tempus adipiscing</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
+							<ul class="actions vertical">
+								<li><a href="#" class="button">Learn More</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="images/spotlight02.jpg" alt="" />
+						</div>
+					</section>-->
+
+				<!-- Four -->
+					<!--<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+						<div class="content">
+							<h2>Pharetra etiam nulla</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
+							<ul class="actions vertical">
+								<li><a href="#" class="button">Learn More</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="images/spotlight03.jpg" alt="" />
+						</div>
+					</section>-->
+
+				<!-- Five -->
+					<section class="wrapper style1 content-align-left">
+						<div class="inner">
+							<h2>Byron Williams CV</h2>
+
+
+<h3 id="work-experience:a7f5c7beb34177c674e232206a70e33a">Work Experience</h3>
+
+<h4>2P Ventures, Bath (September 2016 - December 2016)<br />Senior Full Stack Developer. <i>Contract</i></h4>
+<ul>
+	<li>NodeJS: Client Specific Analytics Tool
+	<ul>
+		<li>
+			AWS Lambda NodeJS Express endpoint which ingests user actions, page
+			views and ecommerce purchase events and stores them in DynamoDB and
+			Redshift.
+		</li>
+		<li>
+			Plugin driven processing architecture used to process groups of events
+			into sessions. Multiple processes passing data down a pipeline removing
+			erroneous data, enriching the payloads for later processing and sending
+			to various endpoints (Redshift, BigQuery and S3).
+		</li>
+		<li>
+			Writing BigQuery queries to extract data across multiple datasets
+		</li>
+		<li>
+			Modify existing Angular 1.5 application to read new BiqQuery queries,
+			UI tweaks and enhancements to graphs and tables.
+		</li>
+	</ul>
+</li>
 </ul>
-{% endif %}
+
+<h4 id="swoon-bath-dec-2013-present-full-stack-developer:a7f5c7beb34177c674e232206a70e33a">Swoon Editions, London (May 2015 - June 2016): Senior Full Stack Developer</h4>
+<ul>
+<li>Python: Compare the Furniture Market (Python+MySQL) - Project Lead
+<ul>
+    <li>Scrapy based Website Scraping to compare furniture ranges and price points</li>
+    <li>Throughput analysis of competitor stock levels and pricing changes</li>
+</ul>
+<li>Python: Logistics Interface (Python+MySQL) - Project Lead
+<ul>
+<li>Retrieve + Send Parcels through Interlink API</li>
+<li>Reverse engineer a suppliers website, converting it into an API</li>
+</ul></li>
+<li>PHP: Building a Logistics Operation (Symfony+Doctrine) - Project Lead
+
+<ul>
+<li>Heuristics based selection of carrier + packages</li>
+<li>Scheduling deliveries with multiple carriers &amp; price points</li>
+</ul></li>
+
+<li>Manage AWS Server Infrastructure using Ansible Stack for server deployment.</li>
+<li>Chrome Extensions to aide internal customers</li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="cloudfind-bath-dec-2013-present-full-stack-developer:a7f5c7beb34177c674e232206a70e33a">Cloudfind, Bath (Dec 2013 - May 2015): Full Stack Developer</h4>
+
+<ul>
+<li>Python: Writing a webapp using Django + Postgres.
+
+<ul>
+<li>Asynchronous tasks use Celery and RabbitMQ.</li>
+<li>Performance tuning both Postgres and our SQL queries</li>
+<li>Writing OAuth login and backend code interfacing with both Google Drive
+and Dropbox APIs</li>
+</ul></li>
+<li>JavaScript: Instigated the use of AngularJS throughout the whole front end. Involved
+converting Django views to JSON API Endpoints, using Grunt + Karma for Unit
+Testing.</li>
+<li>Manage AWS Server Infrastructure using Salt Stack for server deployment.</li>
+<li>Created a Go based <a href="/dev/simple-deploys/">Hipchat bot</a> to deliver better
+deployments.</li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="witlr-glastonbury-aug-2013-dec-2013-full-stack-php-web-developer:a7f5c7beb34177c674e232206a70e33a">Witlr, Glastonbury (Aug 2013 - Dec 2013): Full Stack PHP Web Developer</h4>
+
+<ul>
+<li>Responsible for creating the Witlr site and administration of servers.</li>
+<li>Used PHP Laravel framework + MySQL for main site, MongoDB for Geospatial
+indexing and ElasticSearch for the full text index.</li>
+<li>Produced rudimentary CV Parser for feature extraction in Python/Node.js. A
+Gearman queue was used for background task processing.</li>
+</ul>
+
+<p><br /></p>
+
+<h4 id="vertical-io-towcester-nov-2011-july-2013-owner-director:a7f5c7beb34177c674e232206a70e33a">Vertical IO, Towcester (Nov 2011 - July 2013): Owner &amp; Director</h4>
+
+<ul>
+<li>Providing IT Support and Hosted Terminal Servers for SMEs - mainly
+Accountancy Firms. Deployment of Windows Server 2008, MS Exchange 2010</li>
+<li>Re-sponsible for all business functions and day to day running.</li>
+<li>Wrote Ticket/Customer management system using Django, Python based latency
+monitor.</li>
+<li>Automatic Web Server deployment using ZeroMQ. Systems Administrator for
+MooseFS cluster, Postfix/Dovecot Email Cluster and replicated DNS servers.</li>
+</ul>
+
+<div class="pagebreak"></div>
+
+<h2 id="projects:a7f5c7beb34177c674e232206a70e33a">Projects</h2>
+
+<h4 id="figroll-http-www-figroll-io-co-founder-october-2014-present:a7f5c7beb34177c674e232206a70e33a"><a href="http://www.figroll.io">Figroll</a> + <a href="http://www.pebbl.io">Pebbl</a>, Co-Founder (October 2014 - December 2016)</h4>
+<p>
+    Both Figroll and Pebbl are both live products, serving real customers.
+    Figroll focusses on serving HTML5 apps allowing developers to upload their
+    sites through a CLI/CI/SFTP or the Web Interface. It can also proxy API requests.
+    <br />Pebbl is a PHP version built in partnership with PulseCMS.
+</p>
+<ul>
+<li>Go: Creation of redundant static website hosting solution
+<ul>
+    <li>Web Server with custom handlers for Letsencrypt/Caching and Virtual Hosting</li>
+    <li>API backend connecting to RethinkDB</li>
+</ul>
+</li>
+<li>AngularJS: Web Interface
+<ul>
+    <li>Angular 1.5 App to allow users to upload sites to Figroll</li>
+</ul>
+</li>
+<li>Ops: Backend cluster to handle traffic
+<ul>
+    <li>Kubernetes, Ceph, Clustered RethinkDB, Redis</li>
+</ul>
+</li>
+</ul>
+
+<h4 id="bathhacked-http-www-figroll-io-co-founder-october-2014-present:a7f5c7beb34177c674e232206a70e33a">BANES Energy Usage</h4>
+<p>
+    Bath public building energy data is collected by the council on a 30 minute
+    basis. As part of Bath: Hacked they asked for the data to be visualised and
+    to allow for trends to be picked out. <i>Code live on 8th Aug 2016</i>
+</p>
+<ul>
+<li>Go: API Backend for Energy Data
+<ul>
+    <li>Gin based API, with a RethinkDB backend</li>
+    <li>Future: Pipe data to InfluxDB</li>
+</ul>
+</li>
+<li>AngularJS: Web Interface
+<ul>
+    <li>Angular 2 App showing buildings over different weeks with corresponding energy usage graphs</li>
+</ul>
+</li>
+</ul>
+
+<!--<div class="pagebreak"></div>-->
+
+<h2 id="education:a7f5c7beb34177c674e232206a70e33a">Education</h2>
+
+<h4 id="de-montfort-university-leicester-2007-2011:a7f5c7beb34177c674e232206a70e33a">De Montfort University, Leicester (2007 - 2011)</h4>
+
+<ul>
+<li><strong>1st Class BSc</strong> (Hons) Computer Science</li>
+<li><strong>Year 3:</strong> Fuzzy Logic, Data Mining, Further Software Engineering
+Principles
+
+<ul>
+<li>Completed a final year project investigating Stock Market Sentiment Analysis</li>
+<li>Rowed &amp; Coxed for De Montfort University Rowing Club, where I was the
+Treasurer</li>
+</ul></li>
+<li><strong>Year 2:</strong> Systems Programming, OO Software Design &amp; Development,
+Internet Software Development, Data Specification &amp; Design C Programming,
+Web Development</li>
+<li><strong>Year 1:</strong> Database Development, Computer Science Fundamentals,
+Introduction to Haskell and C++</li>
+</ul>
+
+<h4 id="magdalen-college-school-brackley-2000-2007:a7f5c7beb34177c674e232206a70e33a">Magdalen College School, Brackley (2000 - 2007)</h4>
+
+<ul>
+<li><strong>A Levels:</strong> Applied ICT [CC], Geography [C] and Business Studies [C]</li>
+<li><strong>GCSEs:</strong> English [B], Maths [B], Applied Science [AA], Applied ICT [CC],
+Geography [A], Business Studies [A], German [A]</li>
+</ul>
+
+<h2 id="interests-activities-other:a7f5c7beb34177c674e232206a70e33a">Interests, Activities &amp; Other</h2>
+
+<ul>
+<li>Driving License: Full</li>
+
+<li>Languages: English (Native), German (Intermediate), Swedish (Beginner)</li>
+
+<li>Member of <a href="http://www.dmu.ac.uk/about-dmu/schools-and-departments/school-of-computer-science-and-informatics/working-with-industry.aspx">De Montfort University Industrial Liason Committee</a></li>
+
+<li>I like following processes from start to finish; for this reason I have
+started <a href="/bees">bee-keeping</a> in order to produce mead.</li>
+
+<li>On a more healthy note I run and attempt Taekwondo</li>
+<li>Github: <a href="https://github.com/reactor10">reactor10</a></li>
+</ul>
+
+
+
+						</div>
+
+						<!-- Gallery -->
+							<!--<div class="gallery style2 medium lightbox onscroll-fade-in">
+								<article>
+									<a href="images/gallery/fulls/01.jpg" class="image">
+										<img src="images/gallery/thumbs/01.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Ipsum Dolor</h3>
+										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
+										<ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/02.jpg" class="image">
+										<img src="images/gallery/thumbs/02.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Feugiat Lorem</h3>
+										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
+										<ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/03.jpg" class="image">
+										<img src="images/gallery/thumbs/03.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Magna Amet</h3>
+										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
+										<ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/04.jpg" class="image">
+										<img src="images/gallery/thumbs/04.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Sed Tempus</h3>
+										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
+										<ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/05.jpg" class="image">
+										<img src="images/gallery/thumbs/05.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Ultrices Magna</h3>
+										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
+										<ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/06.jpg" class="image">
+										<img src="images/gallery/thumbs/06.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Sed Tempus</h3>
+										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
+										<ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/07.jpg" class="image">
+										<img src="images/gallery/thumbs/07.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Ipsum Lorem</h3>
+										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
+										<ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/08.jpg" class="image">
+										<img src="images/gallery/thumbs/08.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Magna Risus</h3>
+										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
+										<ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/09.jpg" class="image">
+										<img src="images/gallery/thumbs/09.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Tempus Dolor</h3>
+										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
+										<ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/10.jpg" class="image">
+										<img src="images/gallery/thumbs/10.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Sed Etiam</h3>
+										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
+										<ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/11.jpg" class="image">
+										<img src="images/gallery/thumbs/11.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Magna Lorem</h3>
+										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
+										<ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="images/gallery/fulls/12.jpg" class="image">
+										<img src="images/gallery/thumbs/12.jpg" alt="" />
+									</a>
+									<div class="caption">
+										<h3>Ipsum Dolor</h3>
+										<p>Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices.</p>
+										<ul class="actions">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+							</div>-->
+
+					</section>
+
+				<!-- Footer -->
+					<footer class="wrapper style1 align-center">
+						<div class="inner">
+							<ul class="icons">
+								<!--<li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>-->
+								<!--<li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>-->
+								<!--<li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>-->
+								<li><a href="https://uk.linkedin.com/in/112byronwilliams" class="icon style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								<li><a href="mailto:byron@112percent.com" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+							</ul>
+							<p>&copy; Byron Williams 2007-2017. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<!--<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>-->
+
+	</body>
+</html>
