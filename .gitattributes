@@ -1,9 +1,4 @@
-images/top5.jpg filter=lfs diff=lfs merge=lfs -text
 images/top6.jpg filter=lfs diff=lfs merge=lfs -text
-images/top.jpg filter=lfs diff=lfs merge=lfs -text
-images/top2.jpg filter=lfs diff=lfs merge=lfs -text
-images/top3.jpg filter=lfs diff=lfs merge=lfs -text
-images/top4.jpg filter=lfs diff=lfs merge=lfs -text
 assets/fonts/fontawesome-webfont.woff filter=lfs diff=lfs merge=lfs -text
 assets/fonts/fontawesome-webfont.woff2 filter=lfs diff=lfs merge=lfs -text
 assets/fonts/FontAwesome.otf filter=lfs diff=lfs merge=lfs -text
